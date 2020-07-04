@@ -1,6 +1,6 @@
 const credits = 23580;
 const pricePerDroid = 3000;
-const droidsAmount = Number(prompt('How many droid would you like to buy?'));
+const droidsAmount = Number(prompt('Сколько вам нужно дроидов?'));
 
 let totalPrice = 0;
 let message = '';
