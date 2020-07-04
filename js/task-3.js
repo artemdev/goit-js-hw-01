@@ -5,7 +5,7 @@ const ADMIN_PASSWORD = 'jqueryismyjam';
 //check  user input
 if (userPassword === ADMIN_PASSWORD) {
   message = 'Добро пожаловать!';
-} else if (userPassword == null) {
+} else if (userPassword === null) {
   message = 'Отменено пользователем!';
 } else {
   message = 'Доступ запрещен, неверный пароль!';

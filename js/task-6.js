@@ -9,7 +9,7 @@ while (input !== null) {
   inputNumber = Number.parseInt(input);
   //validate user input
   //Only numbers are allowed
-  if (!Number.isNaN(inputNumber)) {
+  if (!Number.isNaN(Number(inputNumber))) {
     total += Number.parseInt(input);
   }
 }

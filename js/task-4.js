@@ -4,7 +4,7 @@ const droidsAmount = Number(prompt('How many droid would you like to buy?'));
 
 let totalPrice = 0;
 let message = '';
-let droidsLeft = 0;
+let creditsLeft = 0;
 
 //validate user input
 if (droidsAmount === 0) {
@@ -17,12 +17,12 @@ if (droidsAmount === 0) {
   if (totalPrice > credits) {
     message = 'Недостаточно средств на счету!';
   } else {
-    droidsLeft = credits - totalPrice;
+    creditsLeft = credits - totalPrice;
     message =
       'Вы купили ' +
       droidsAmount +
       ' дроидов, на счету осталось ' +
-      droidsLeft +
+      creditsLeft +
       ' кредитов.';
   }
 }
