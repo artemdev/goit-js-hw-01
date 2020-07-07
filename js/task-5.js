@@ -1,5 +1,9 @@
 let price = 0;
-let country = prompt('Ваша страна?').toLowerCase();
+let country = prompt('Ваша страна?');
+
+if (country !== null) {
+  country = country.toLowerCase();
+}
 
 let priceChina = '100';
 let priceChili = '250';
