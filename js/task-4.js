@@ -6,7 +6,7 @@ let droidsAmount = prompt('Сколько вам нужно дроидов?');
 let totalPrice = 0;
 let message;
 let creditsLeft = 0;
-console.log(droidsAmount);
+
 //validate user input
 if (droidsAmount === null) {
   message = 'Отменено пользователем!';
