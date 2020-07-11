@@ -12,6 +12,4 @@ if (userPassword === ADMIN_PASSWORD) {
 }
 
 //show result
-if (!message.empty) {
-  alert(message);
-}
+alert(message);

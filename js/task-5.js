@@ -31,7 +31,7 @@ switch (country) {
 if (price !== 0) {
   //uppercase the name
   country = country.charAt(0).toUpperCase() + country.slice(1);
-  alert('Доставка в ' + country + ' будет стоить ' + price + ' кредитов');
+  alert(`Доставка в ${country} будет стоить ${price} кредитов`);
 } else {
   alert('В вашей стране доставка не доступна');
 }

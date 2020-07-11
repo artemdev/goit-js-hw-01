@@ -1,15 +1,17 @@
+'use strict';
 const credits = 23580;
 const pricePerDroid = 3000;
-const droidsAmount = Number(prompt('Сколько вам нужно дроидов?'));
+let droidsAmount = prompt('Сколько вам нужно дроидов?');
 
 let totalPrice = 0;
-let message = '';
+let message;
 let creditsLeft = 0;
-
+console.log(droidsAmount);
 //validate user input
-if (droidsAmount === 0) {
+if (droidsAmount === null) {
   message = 'Отменено пользователем!';
 } else {
+  droidsAmount = Number(droidsAmount);
   //how mych credits user gonna spend
   totalPrice = droidsAmount * pricePerDroid;
 
@@ -18,12 +20,7 @@ if (droidsAmount === 0) {
     message = 'Недостаточно средств на счету!';
   } else {
     creditsLeft = credits - totalPrice;
-    message =
-      'Вы купили ' +
-      droidsAmount +
-      ' дроидов, на счету осталось ' +
-      creditsLeft +
-      ' кредитов.';
+    message = `Вы купили ${droidsAmount} дроидов, на счету осталось ${creditsLeft} кредитов.`;
   }
 }
 
