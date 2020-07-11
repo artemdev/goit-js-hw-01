@@ -5,27 +5,27 @@ if (country !== null) {
   country = country.toLowerCase();
 }
 
-let priceChina = '100';
-let priceChili = '250';
-let priceAustralia = '170';
-let priceIndia = '80';
-let priceJamayka = '120';
+const priceChina = '100';
+const priceChili = '250';
+const priceAustralia = '170';
+const priceIndia = '80';
+const priceJamayka = '120';
 
 switch (country) {
   case 'китай':
-    price = '100';
+    price = priceChina;
     break;
   case 'чили':
-    price = '250';
+    price = priceChili;
     break;
   case 'австралия':
-    price = '170';
+    price = priceAustralia;
     break;
   case 'индия':
-    price = '80';
+    price = priceIndia;
     break;
   case 'ямайка':
-    price = '120';
+    price = priceJamayka;
     break;
 }
 if (price !== 0) {
