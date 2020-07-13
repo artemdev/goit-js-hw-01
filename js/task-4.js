@@ -1,7 +1,17 @@
 'use strict';
 const credits = 23580;
 const pricePerDroid = 3000;
-let droidsAmount = prompt('Сколько вам нужно дроидов?');
+let droidsAmount;
+let promptMessage = 'Сколько вам нужно дроидов ?';
+let incorrect_input_attempts = 0;
+//validate user input
+do {
+  if (incorrect_input_attempts > 0) {
+    promptMessage = 'Пожалуйста, количество дронов числом';
+  }
+  droidsAmount = Number(prompt(promptMessage));
+  incorrect_input_attempts += 1;
+} while (Number.isNaN(droidsAmount) || droidsAmount == '');
 
 let totalPrice = 0;
 let message;
@@ -11,10 +21,8 @@ let creditsLeft = 0;
 if (droidsAmount === null) {
   message = 'Отменено пользователем!';
 } else {
-  droidsAmount = Number(droidsAmount);
   //how mych credits user gonna spend
   totalPrice = droidsAmount * pricePerDroid;
-
   // validate if its enough
   if (totalPrice > credits) {
     message = 'Недостаточно средств на счету!';
